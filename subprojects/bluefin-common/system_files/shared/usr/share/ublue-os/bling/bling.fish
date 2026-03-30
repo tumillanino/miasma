@@ -1,0 +1,35 @@
+#!/usr/bin/env fish
+
+# FIXME: add no-source-twice fix
+
+# ls aliases
+if [ "$(command -v eza)" ]
+    alias ll='eza -l --icons=auto --group-directories-first'
+    alias l.='eza -d .*'
+    alias ls='eza'
+    alias l1='eza -1'
+end
+
+# ugrep for grep
+if [ "$(command -v ug)" ]
+    alias grep='ug'
+    alias egrep='ug -E'
+    alias fgrep='ug -F'
+    alias xzgrep='ug -z'
+    alias xzegrep='ug -zE'
+    alias xzfgrep='ug -zF'
+end
+
+# bat for cat
+alias cat='bat --style=plain --pager=never' 2>/dev/null
+
+if status is-interactive
+    # Atuin shell integration is disabled by default
+    # The atuin binary is still installed and available for manual use
+    # To enable shell integration, uncomment the following line or add it to your config.fish:
+    # [ "$(command -v atuin)" ] && eval "$(atuin init fish $ATUIN_INIT_FLAGS)"
+
+    [ "$(command -v starship)" ] && eval "$(starship init fish)"
+
+    [ "$(command -v zoxide)" ] && eval "$(zoxide init fish)"
+end

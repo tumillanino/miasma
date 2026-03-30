@@ -1,0 +1,8 @@
+[Unit]
+Description=Chezmoi Update
+
+[Service]
+ExecStart=mkdir -p %h/.config/miasma/chezmoi
+ExecStart=touch %h/.config/miasma/chezmoi/chezmoi.toml
+ExecStart=sh -c 'yes s | chezmoi apply --no-tty --keep-going -S /usr/share/miasma/zdots --verbose --config %h/.config/miasma/chezmoi/chezmoi.toml'
+Type=oneshot

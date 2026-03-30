@@ -1,0 +1,12 @@
+[Unit]
+Description=Initializes Chezmoi if directory is missing
+ConditionPathExists=!%h/.config/miasma/chezmoi
+
+[Service]
+ExecStart=mkdir -p %h/.config/miasma/chezmoi
+ExecStart=touch %h/.config/miasma/chezmoi/chezmoi.toml
+ExecStart=chezmoi apply -S /usr/share/miasma/mdots --config %h/.config/miasma/chezmoi/chezmoi.toml
+Type=oneshot
+
+[Install]
+WantedBy=graphical-session-pre.target

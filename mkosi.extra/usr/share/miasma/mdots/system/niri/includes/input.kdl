@@ -1,0 +1,22 @@
+input {
+    keyboard {
+        xkb {}
+        numlock
+    }
+
+    touchpad {
+        tap
+        accel-profile "adaptive"
+        click-method "clickfinger"
+    }
+
+    mouse {
+        accel-profile "flat"
+    }
+
+    trackpoint {}
+}
+
+clipboard {
+    disable-primary
+}
