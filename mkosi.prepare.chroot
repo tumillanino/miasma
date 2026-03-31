@@ -20,3 +20,7 @@ fi
 if [ ! -e "${SRCDIR}/cache/flathub.flatpakrepo" ]; then
   curl --retry 3 -Lo "${SRCDIR}/cache/flathub.flatpakrepo" "https://dl.flathub.org/repo/flathub.flatpakrepo"
 fi
+
+if [ ! -e "${SRCDIR}/cache/gruvbox-plus-icon-pack" ]; then
+  git clone --depth=1 https://github.com/SylEleuth/gruvbox-plus-icon-pack.git "${SRCDIR}/cache/gruvbox-plus-icon-pack"
+fi

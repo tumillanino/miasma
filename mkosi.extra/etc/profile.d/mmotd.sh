@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-/usr/bin/zmotd
+/usr/bin/mmotd
