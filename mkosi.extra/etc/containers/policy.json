@@ -8,23 +8,23 @@
         "docker": {
             "registry.access.redhat.com": [
                 {
-                    "type": "signedBy",
-                    "keyType": "GPGKeys",
-                    "keyPath": "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
+                    "type": "insecureAcceptAnything"
+                    //"keyType": "GPGKeys",
+                    //"keyPath": "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
                 }
             ],
             "registry.redhat.io": [
                 {
-                    "type": "signedBy",
-                    "keyType": "GPGKeys",
-                    "keyPath": "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
+                    "type": "insecureAcceptAnything"
+                    //"keyType": "GPGKeys",
+                    //"keyPath": "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
                 }
             ],
             "ghcr.io/tumillanino": [
                 {
                     "type": "sigstoreSigned",
                     "keyPaths": [
-                        "/usr/share/pki/containers/miasma.pub",
+                        "/usr/share/pki/containers/miasma.pub"
                     ],
                     "signedIdentity": {
                         "type": "matchRepository"
