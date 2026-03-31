@@ -1,35 +1,33 @@
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠀⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠗⠀⠀⣀⣄⠀⢿⣿⣿⣿⠟⠁⢠⡆⠉⠙⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⠀⣴⣿⡟⠀⠘⣿⣿⠋⠀⠀⠀⢠⣶⡀⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢠⣿⠛⣶⠀⠀⣿⡟⠀⠀⠀⢠⣿⣿⡇⠀⠠⣽⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠅⠀⠀⣿⠏⠀⣿⠀⠀⣿⠁⠀⠀⢠⣿⠟⢻⡇⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⣼⣿⠀⢰⡟⠀⠀⠛⠀⠀⠀⣾⡇⠀⢸⡇⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠿⠃⠀⠈⠀⢀⠀⣀⣀⠀⠘⠟⠀⠀⡾⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠀⠀⢀⠂⠀⠈⠉⢴⣽⣿⠵⣿⡶⣂⣄⡀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⡟⠡⠆⢀⠀⠀⠀⠀⠄⠀⠈⠘⠏⢿⣶⣿⡿⢟⣱⣖⠒⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⡟⣻⠏⣠⠄⠀⢀⡀⠀⠀⠀⠀⠈⠀⠀⠀⢸⣿⢦⠄⠙⣿⡇⠩⣭⣅⠈⢿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣟⣼⡇⠈⢀⣴⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠁⠀⢀⠀⠈⠰⣶⡤⠿⠃⢸⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⡟⠉⢠⡶⠋⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣴⣶⣤⣄⡀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿
-⣿⣿⣿⡏⢀⡠⠀⠀⠀⠀⠀⠀⠀⢀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣦⣄⠀⠀⠂⠀⠈⣿⣿⣿⣿
-⣿⣿⣿⢃⠈⠀⢠⠀⠀⠀⠀⠀⢠⣿⣿⣿⠿⣩⣏⡙⣛⣛⣿⣿⣿⣿⣿⣿⣿⡿⢇⠀⠀⠄⠀⠘⣿⣿⣿
-⣿⣿⣿⡎⠀⠀⠀⠀⠀⠀⠀⠠⣿⣿⣿⡟⣰⣿⠁⢀⠈⢿⣿⣿⣿⣿⢁⣴⠖⢲⣾⡇⠀⠀⠄⠀⣿⣿⣿
-⣿⣿⣿⢀⠀⠀⠀⠀⠀⠀⠀⠀⣏⢿⣿⡇⣿⡇⠀⠀⠀⣼⣿⣿⣿⡇⣼⡏⠀⠀⣿⡇⠀⠀⠀⠀⣻⣿⣿
-⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⢸⣄⠻⣷⡘⣷⣀⣀⣴⣿⡟⠉⠛⠓⣿⡇⠀⢰⣿⡇⠀⠀⠀⣼⣿⣿⣿
-⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠙⢷⣌⠻⢿⣿⣿⣿⣿⣿⣦⣶⣿⣾⣧⣤⡾⠏⠀⠀⠀⠀⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⠶⢌⣉⣛⠛⠿⠿⠿⠿⠿⠛⠉⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⠀⠲⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠈⠁⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠻⠿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⡏⠛⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡘⡻⣿⣿
-⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⢨⡛⡛⣁⣿
-⣿⣿⣿⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠂⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⣿⣿
-⣿⣿⣿⣿⠇⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣄⣠⣴⣾⣿⣿⣿⣿
-⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⡿⠋⠠⣾⡇⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿
-⡟⢁⣠⣤⣦⣌⡃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣏⡹⢿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⡿⠿⢶⡬⠙⠟⠋⣁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣏⠛⠚⠃⠀⠀⢰⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣻⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣧⣆⣤⣄⣤⣼⠁⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠠⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⠿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣧⣤⣴⣴⣦⠀⣄⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠐⠚⠛⠓⠂⢀⡄⠀⢰⢽⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣰⣤⣄⣀⢀⠀⢠⡅⠀⠀⢀⣤⣤⡼⠧⣤⣤⣠⣤⣤⣄⡀⡀⣰⣦⣣⠈⡡⣽
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣹⣿⣿⣿⣾⣷⣾⡗⣒⠶⣿⣿⣿⡷⣾⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿
+                                        AAAAAA      AAA                                             
+                                     AAAAAAA     AAAAAAAAAA                                         
+                                   AAAA      AAAAAA   AAAAAA     AA                                 
+                                AAAAAA   AAAAAAAAAAAAAA   AAAAAAAAAAAA                              
+                              AAAA  AAAAAAAAAAAA  AAAAAA   A AA    AAAAA                            
+                          AAAAAA   AA  AAA     AAAAAAA  AAAAAAA        AAA                          
+                         AAAAAA  A    AA  AAAAAA   AAAAA   AAAAA         A                          
+                        AA    A AAAAAA  AAAAAAA     AAA  AAAAA  AA       AA                         
+                        AA AAA  AAA AAA     AA     AAAA  AAAAAA          AAA                        
+                         AAAAAAAAAA AA AA         AAAAA       AAA A   AA  AAA                       
+                     AA AAAAAA         AAA       AAAAAA                 A  AAA                      
+                    AAAAAAAA A A      AAA       AAAAAAA                      AA                     
+                    AA AAAAAAA A    AAAA     AAAAAA AAA     AAA              AAA                    
+                    AAAAAAA A A  A   AA    AAAAAAAAAAAAAAA      A  A          AAA                   
+                    AAAAA  AA        AAAAAAAAAA AA AAAAAAAAAAAA AAAAAAA AAA    AA                   
+               AAAAAAAAAA AA   AAAAAAAAAAAAAA AAAAAAAA AAAAAAAAAAAAAAAAA  AAAAAAAAAAA               
+               AAAAAAA A A    AA    AAAAAAAA  A  A A AAA  A AAAAAAAAAAA   AAAAAAAAAAA               
+               AAAAAAAAAAAAAAAAAAAAAAAAAAAAA  AAAAAAAA A AAAAAAAAAA  AA      AAAAAAAA               
+               AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA     A  A AAAAAAAAAAAAAAA  AA  AAAAAAAAA               
+                    AA    AA   AAAAAAAAAAAAAAAA  AA  AAAAAAAAAAA   A    A  AAA AA                   
+                    AAA            A       AAAAAA AAAAAAA     AA A      A AAAAAA                    
+                     AAAA                    AAAAAAAAA        AA A AA AAA AA AA                     
+                      AAAA                   AAAAAAA       AA AA AA  AA AAAA AA                     
+                        AAA                  AAAAAA        AAAAA   AAA  AAAAAAA                     
+                        AA                   AAAAA        AAAAAAA AAA    AA  AA                     
+                        AAAA    AAAAAAAA   AAAAAAAAA      A    AAAAA     AA AA                      
+                         AAA   A      AAA    AAAA           AAAAAAAA   A AAAA                       
+                            AAAAAAAAA    AAAAA     AAAAA AAAAAAAAAA   AAAA                          
+                            AAAAAAAAAAAA       AAAAAA  AAAAAA         AA                            
+                                      AAAAAAAA      AAAAA    AA    AAAA                             
+                                       A         AAAAAAAAAAAAAAAAAAA                                
+                                        A  AAAAAAAAAAAAA                                            
+                                          AAAAAAAAA                                                 
