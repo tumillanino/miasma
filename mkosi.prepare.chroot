@@ -21,6 +21,10 @@ if [ ! -e "${SRCDIR}/cache/flathub.flatpakrepo" ]; then
   curl --retry 3 -Lo "${SRCDIR}/cache/flathub.flatpakrepo" "https://dl.flathub.org/repo/flathub.flatpakrepo"
 fi
 
-if [ ! -e "${SRCDIR}/cache/gruvbox-plus-icon-pack" ]; then
-  git clone --depth=1 https://github.com/SylEleuth/gruvbox-plus-icon-pack.git "${SRCDIR}/cache/gruvbox-plus-icon-pack"
+if [ ! -e "${SRCDIR}/cache/Gruvbox-Plus-Dark" ]; then
+  GRUVBOX_URL=$(curl -fsSL https://api.github.com/repos/SylEleuth/gruvbox-plus-icon-pack/releases/latest | \
+    jq -rc '.assets[] | select(.name == "Gruvbox-Plus-Dark.zip") | .browser_download_url')
+  curl -fsSLo "${SRCDIR}/cache/Gruvbox-Plus-Dark.zip" "${GRUVBOX_URL}"
+  unzip -q "${SRCDIR}/cache/Gruvbox-Plus-Dark.zip" -d "${SRCDIR}/cache/"
+  rm "${SRCDIR}/cache/Gruvbox-Plus-Dark.zip"
 fi
