@@ -8,7 +8,7 @@
 
 ## About
 > [!WARNING]
-> This is my personal desktop built using Zirconium as a template. All credit is with Zirconium. At the moment there have been very little changes and it is just a proof of concept before commencing actual work. For my actual Miasma OS build, see [Miasma OS](https://github.com/tumillanino/miasma-os).
+> This is my personal desktop built using [Zirconium](https://github.com/zirconium-dev/zirconium) as a template. All credit is with Zirconium. This repo is completely subject to my personal taste and if you are interested in an Atomic Fedora distro that uses Dank Material shell, you should use Zirconium. At the moment there have been very little changes and it is just a proof of concept before commencing actual work. Will add the things I use, for example doas and nix package manager. For my actual Miasma OS build, see [Miasma OS](https://github.com/tumillanino/miasma-os).
 
 Miasma OS is a [Fedora Atomic desktop](https://fedoraproject.org/atomic-desktops/) built with love on top of a Bazzite base. It is a spin aimed at music producers and musicians utilising features found in [Fedora Jam Lab](https://fedoraproject.org/labs/jam/), [Av Linux](https://www.bandshed.net/avlinux/) and [Ubuntu Studio](https://ubuntustudio.org/) but on an immutable base thanks to [Bazzite](https://bazzite.gg/) and [Universal blue](https://universal-blue.org/).
 
