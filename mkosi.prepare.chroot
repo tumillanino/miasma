@@ -31,3 +31,18 @@ if [ ! -e "${SRCDIR}/cache/Gruvbox-Plus-Dark" ]; then
     | head -1 | xargs -I{} mv {} "${SRCDIR}/cache/Gruvbox-Plus-Dark"
   rm -rf "${SRCDIR}/cache/${GRUVBOX_ZIP}" "${SRCDIR}/cache/gruvbox-extract/"
 fi
+
+if [ ! -e "${SRCDIR}/cache/reaper.tar.xz" ]; then
+  curl --retry 3 -Lo "${SRCDIR}/cache/reaper.tar.xz" \
+    "https://www.reaper.fm/files/7.x/reaper765_linux_x86_64.tar.xz"
+fi
+
+if [ ! -e "${SRCDIR}/cache/renoise.tar.gz" ]; then
+  curl --retry 3 -Lo "${SRCDIR}/cache/renoise.tar.gz" \
+    "https://files.renoise.com/demo/Renoise_3_5_4_Demo_Linux_x86_64.tar.gz"
+fi
+
+if [ ! -e "${SRCDIR}/cache/surge-xt.rpm" ]; then
+  curl --retry 3 -Lo "${SRCDIR}/cache/surge-xt.rpm" \
+    "https://github.com/surge-synthesizer/releases-xt/releases/download/1.3.4/surge-xt-x86_64-1.3.4.rpm"
+fi

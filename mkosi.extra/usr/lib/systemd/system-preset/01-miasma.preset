@@ -1,4 +1,6 @@
 enable auditd.service
+enable realtime-setup.service
+enable realtime-entsk.service
 enable bootc-fetch-apply-updates.timer
 enable brew-setup.service
 enable firewalld.service

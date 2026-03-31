@@ -114,3 +114,31 @@ alias set-accent-colour := set-accent-color
 
 set-accent-color:
 	gsettings set org.gnome.desktop.interface accent-color "$(gum choose blue teal green yellow orange red pink purple slate --limit 1 --header "Pick an accent colour")"
+
+# Route system plugin paths into Reaper and copy plugins to user directories
+route-plugins:
+    #!/usr/bin/env bash
+    echo 'Adding /usr/lib64 to Reaper plugin paths...'
+    mkdir -p ~/.config/REAPER
+    touch ~/.config/REAPER/reaper.ini
+    sed -i '/^vstpath=/ s|$|;/usr/lib64/vst3;/usr/lib64/vst|' ~/.config/REAPER/reaper.ini
+    sed -i '/^lv2path=/ s|$|;/usr/lib64/lv2|' ~/.config/REAPER/reaper.ini
+    sed -i '/^clappath=/ s|$|;/usr/lib64/clap|' ~/.config/REAPER/reaper.ini
+    mkdir -p ~/.vst3 ~/.vst
+    cp -rn /usr/lib64/vst3/* ~/.vst3/ 2>/dev/null || true
+    cp -rn /usr/lib64/vst/* ~/.vst/ 2>/dev/null || true
+    echo 'Paths updated. Please restart Reaper and rescan plugins.'
+
+# Set up yabridge to bridge Windows VST plugins via Wine
+setup-audio:
+    #!/usr/bin/env bash
+    export WINELOADER='/opt/wine-staging/bin/wine'
+    wineboot -u
+    yabridgectl add "$HOME/.wine/drive_c/Program Files/Common Files/VST3"
+    yabridgectl sync
+
+# First-run setup: configure Wine/yabridge paths and system audio flags
+first-run:
+    #!/usr/bin/env bash
+    mjust setup-audio
+    mjust route-plugins
