@@ -18,7 +18,7 @@ name=Terra $releasever (Extras) - Source
 metalink=https://tetsudou.fyralabs.com/metalink?repo=terra$releasever-extras-source&arch=$basearch
 metadata_expire=6h
 type=rpm
-gpgcheck=1
+gpgcheck=0
 # gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-terra$releasever-extras-source
 repo_gpgcheck=0
 enabled=0
