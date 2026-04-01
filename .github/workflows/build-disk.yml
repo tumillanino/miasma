@@ -32,7 +32,7 @@ jobs:
         id: build-iso
         uses: osbuild/bootc-image-builder-action@main
         with:
-          config-file: ${{ matrix.flavor == './iso.toml' }}
+          config-file: iso.toml
           image: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}${{ matrix.flavor }}:latest
           types: anaconda-iso
           rootfs: btrfs
@@ -74,11 +74,11 @@ jobs:
                 --add /images \
                 --volid miasma-boot \
                 --replace "vmlinuz" "vmlinuz inst.resolution=1280x800" \
-                /output/zirc-unbranded.iso \
-                /output/zirc.iso'
-          sudo mv "${SOURCE_DIR}"/zirc.iso "${SOURCE_DIR}/${IMAGE_NAME}${FLAVOR}-${PLATFORM}.iso"
+                /output/miasma-unbranded.iso \
+                /output/miasma.iso'
+          sudo mv "${SOURCE_DIR}"/miasma.iso "${SOURCE_DIR}/${IMAGE_NAME}${FLAVOR}-${PLATFORM}.iso"
           sha256sum "${SOURCE_DIR}/${IMAGE_NAME}${FLAVOR}-${PLATFORM}.iso" | sudo tee "${SOURCE_DIR}/${IMAGE_NAME}${FLAVOR}-${PLATFORM}.iso-CHECKSUM"
-          sudo rm -f "${SOURCE_DIR}/zirc-unbranded.iso"
+          sudo rm -f "${SOURCE_DIR}/miasma-unbranded.iso"
 
       - name: Upload to S3
         if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)

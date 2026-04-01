@@ -6,7 +6,7 @@ import "/usr/share/ublue-os/just/default.just"
 set allow-duplicate-recipes := true
 
 default:
-    @zjust --choose
+    @mjust --choose
 
 mdots-update:
     #!/usr/bin/env bash
@@ -100,7 +100,7 @@ reset-niri:
         exit 1
     fi
     if gum confirm "Are you sure you want to reset your niri configuration?" ; then
-        zjust mdots-reset "${HOME}/.config/niri"
+        mjust mdots-reset "${HOME}/.config/niri"
     fi
 
 update-greeter:

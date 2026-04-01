@@ -12,10 +12,10 @@ if test ! -e "${XDG_CONFIG_HOME:-$HOME/.config}/miasma/no-show-user-motd"; then
 
      Command                          │ Description
   ─────────────────────────────────────┼────────────────────────────────────
-    ${slight_red} zjust toggle-user-motd ${reset}           │ Toggle this banner on/off
-    ${slight_red} zjust zdots-update ${reset}               │ Update your unmodified dotfiles
-    ${slight_red} zjust update-greeter ${reset}             │ Update your greeter with modifications from your current user
-    ${slight_red} zjust reset-niri ${reset}                 │ Reset niri to the default configuration
+    ${slight_red} mjust toggle-user-motd ${reset}           │ Toggle this banner on/off
+    ${slight_red} mjust mdots-update ${reset}               │ Update your unmodified dotfiles
+    ${slight_red} mjust update-greeter ${reset}             │ Update your greeter with modifications from your current user
+    ${slight_red} mjust reset-niri ${reset}                 │ Reset niri to the default configuration
 
 EOF
 fi

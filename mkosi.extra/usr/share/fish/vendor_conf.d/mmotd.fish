@@ -4,8 +4,8 @@
 function fish_greeting
     if test -d "$HOME"
         if test ! -e "$HOME"/.config/miasma/no-show-user-motd
-            if test -x /usr/bin/zmotd
-                /usr/bin/zmotd
+            if test -x /usr/bin/mmotd
+                /usr/bin/mmotd
             end
         end
     end
