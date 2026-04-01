@@ -1,0 +1,15 @@
+[Unit]
+Description=Mount OverlayFS for /nix
+DefaultDependencies=no
+After=local-fs.target systemd-tmpfiles-setup.service
+Before=nix-daemon.service nix-daemon.socket
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mount-nix-overlay.sh
+RemainAfterExit=yes
+ConditionPathExists=/usr/bin/mount-nix-overlay.sh
+ConditionPathExists=/usr/share/nix-store/store
+
+[Install]
+WantedBy=multi-user.target

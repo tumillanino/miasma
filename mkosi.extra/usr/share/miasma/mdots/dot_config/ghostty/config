@@ -1,3 +1,6 @@
+## Default shell
+command = /bin/zsh -c "tmux new-session"
+
 # Font Configuration
 font-family = MesloLGS Nerd Font
 font-size = 12

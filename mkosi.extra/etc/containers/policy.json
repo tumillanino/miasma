@@ -9,15 +9,11 @@
             "registry.access.redhat.com": [
                 {
                     "type": "insecureAcceptAnything"
-                    //"keyType": "GPGKeys",
-                    //"keyPath": "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
                 }
             ],
             "registry.redhat.io": [
                 {
                     "type": "insecureAcceptAnything"
-                    //"keyType": "GPGKeys",
-                    //"keyPath": "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
                 }
             ],
             "ghcr.io/tumillanino": [
