@@ -30,12 +30,10 @@ rpm -Uvh "${SRCDIR}/cache/surge-xt.rpm"
 # Install Reaper DAW
 tar -xJf "${SRCDIR}/cache/reaper.tar.xz" -C /tmp
 cd /tmp/reaper_linux_x86_64
-./install-reaper.sh --install /usr/lib --integrate-desktop
-if [ -f "/root/.local/share/applications/cockos-reaper.desktop" ]; then
-  mkdir -p /usr/share/applications/
-  mv /root/.local/share/applications/cockos-reaper.desktop /usr/share/applications/
-  sed -i 's|/root/opt/REAPER|/usr/lib/REAPER|g' /usr/share/applications/cockos-reaper.desktop
-fi
+HOME=/root ./install-reaper.sh --install /usr/lib --integrate-desktop
+mkdir -p /usr/share/applications/
+mv /root/.local/share/applications/cockos-reaper.desktop /usr/share/applications/
+sed -i 's|/root/opt/REAPER|/usr/lib/REAPER|g' /usr/share/applications/cockos-reaper.desktop
 rm -rf /tmp/reaper*
 
 # Install Renoise DAW (demo)
