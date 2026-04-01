@@ -85,7 +85,6 @@ stat /usr/share/icons/Gruvbox-Plus-Dark/index.theme
 stat /usr/lib/REAPER/reaper
 stat /usr/share/applications/cockos-reaper.desktop
 stat /usr/lib/systemd/system/realtime-setup.service
-stat /usr/share/nix/nix.tar.xz
 stat /usr/lib/systemd/system/nix-daemon.service
 stat /usr/share/nix-store/store
 
