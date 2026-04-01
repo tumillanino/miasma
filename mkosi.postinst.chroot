@@ -30,9 +30,13 @@ rpm -Uvh "${SRCDIR}/cache/surge-xt.rpm"
 # Install Reaper DAW
 tar -xJf "${SRCDIR}/cache/reaper.tar.xz" -C /tmp
 cd /tmp/reaper_linux_x86_64
-HOME=/root ./install-reaper.sh --install /usr/lib --integrate-desktop
+./install-reaper.sh --install /usr/lib --integrate-desktop
 mkdir -p /usr/share/applications/
-mv /root/.local/share/applications/cockos-reaper.desktop /usr/share/applications/
+# xdg installs system-wide (to /usr/share/applications/) when running as root;
+# fall back to the user-path in case installer behaviour changes again
+if [ ! -f /usr/share/applications/cockos-reaper.desktop ]; then
+  mv /root/.local/share/applications/cockos-reaper.desktop /usr/share/applications/
+fi
 sed -i 's|/root/opt/REAPER|/usr/lib/REAPER|g' /usr/share/applications/cockos-reaper.desktop
 rm -rf /tmp/reaper*
 
