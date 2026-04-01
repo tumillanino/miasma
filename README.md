@@ -1,4 +1,4 @@
-# Miasma OS &nbsp; [![bluebuild build badge](https://github.com/tumillanino/miasma-os/actions/workflows/build.yml/badge.svg)](https://github.com/tumillanino/miasma-os/actions/workflows/build.yml)
+# Miasma OS &nbsp; [![base build badge](https://github.com/tumillanino/miasma/actions/workflows/build-standard.yaml/badge.svg)](https://github.com/tumillanino/miasma-os/actions/workflows/build-standard.yaml) &nbsp; [![rawhide build badge](https://github.com/tumillanino/miasma/actions/workflows/build-rawhide.yaml/badge.svg)](https://github.com/tumillanino/miasma-os/actions/workflows/build-rawhide.yaml) &nbsp; [![base build badge](https://github.com/tumillanino/miasma/actions/workflows/build-disk.yml/badge.svg)](https://github.com/tumillanino/miasma-os/actions/workflows/build-disk.yml)
 
 <p align="center">
   <a href="https://github.com/tumillanino/miasma-os">
@@ -7,6 +7,7 @@
 </p>
 
 ## About
+>
 > [!WARNING]
 > This is my personal desktop built using [Zirconium](https://github.com/zirconium-dev/zirconium) as a template. All credit is with Zirconium. This repo is completely subject to my personal taste and if you are interested in an Atomic Fedora distro that uses Dank Material shell, you should use Zirconium. At the moment there have been very little changes and it is just a proof of concept before commencing actual work. Will add the things I use, for example doas and nix package manager. For my actual Miasma OS build, see [Miasma OS](https://github.com/tumillanino/miasma-os).
 
