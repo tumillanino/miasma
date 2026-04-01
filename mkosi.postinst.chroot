@@ -19,8 +19,8 @@ just --completions fish | sed -E 's/([\(_" ])just/\1mjust/g' >/usr/share/fish/ve
 
 fc-cache --force --really-force --system-only --verbose # recreate font-cache to pick up the added fonts
 
-cp -r "${SRCDIR}/cache/gruvbox-plus-icon-pack/Gruvbox-Plus-Dark" /usr/share/icons/
-gtk-update-icon-cache -f /usr/share/icons/Gruvbox-Plus-Dark/
+cp -r "${SRCDIR}/cache/Gruvbox-Plus-Dark" /usr/share/icons/
+gtk-update-icon-cache -f /usr/share/icons/Gruvbox-Plus-Dark/ || true
 
 ln -sf /dev/null /usr/lib/systemd/system/systemd-remount-fs.service
 
@@ -40,6 +40,7 @@ stat /usr/lib/systemd/system/uupd.timer
 stat /usr/lib/systemd/system/brew-setup.service
 stat /usr/share/homebrew.tar.zst
 stat /usr/lib/tmpfiles.d/homebrew.conf
+stat /usr/share/icons/Gruvbox-Plus-Dark/index.theme
 
 HOME_URL="https://github.com/tumillanino/miasma"
 echo "miasma" | tee "/etc/hostname"
