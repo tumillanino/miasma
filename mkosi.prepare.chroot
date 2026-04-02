@@ -34,13 +34,13 @@ fi
 
 if [ ! -e "${SRCDIR}/cache/Papirus-Dark" ]; then
   PAPIRUS_URL=$(curl -fsSL https://api.github.com/repos/PapirusDevelopmentTeam/papirus-icon-theme/releases/latest |
-    jq -rc '.assets[] | select(.name | endswith(".zip")) | .browser_download_url')
-  PAPIRUS_ZIP="$(basename "${PAPIRUS_URL}")"
-  curl -fsSLo "${SRCDIR}/cache/${PAPIRUS_ZIP}" "${PAPIRUS_URL}"
-  unzip -q "${SRCDIR}/cache/${PAPIRUS_ZIP}" -d "${SRCDIR}/cache/papirus-extract/"
-  find "${SRCDIR}/cache/papirus-extract/" -maxdepth 2 -name "Papirus-Dark" -type d |
+    jq -rc '.tarball_url')
+  curl -fsSLo "${SRCDIR}/cache/papirus-icon-theme.tar.gz" "${PAPIRUS_URL}"
+  mkdir -p "${SRCDIR}/cache/papirus-extract/"
+  tar -xzf "${SRCDIR}/cache/papirus-icon-theme.tar.gz" -C "${SRCDIR}/cache/papirus-extract/" --strip-components=1
+  find "${SRCDIR}/cache/papirus-extract/" -maxdepth 1 -name "Papirus-Dark" -type d |
     head -1 | xargs -I{} mv {} "${SRCDIR}/cache/Papirus-Dark"
-  rm -rf "${SRCDIR}/cache/${PAPIRUS_ZIP}" "${SRCDIR}/cache/papirus-extract/"
+  rm -rf "${SRCDIR}/cache/papirus-icon-theme.tar.gz" "${SRCDIR}/cache/papirus-extract/"
 fi
 
 if [ ! -e "${SRCDIR}/cache/reaper.tar.xz" ]; then
