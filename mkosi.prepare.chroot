@@ -22,14 +22,25 @@ if [ ! -e "${SRCDIR}/cache/flathub.flatpakrepo" ]; then
 fi
 
 if [ ! -e "${SRCDIR}/cache/Gruvbox-Plus-Dark" ]; then
-  GRUVBOX_URL=$(curl -fsSL https://api.github.com/repos/SylEleuth/gruvbox-plus-icon-pack/releases/latest | \
+  GRUVBOX_URL=$(curl -fsSL https://api.github.com/repos/SylEleuth/gruvbox-plus-icon-pack/releases/latest |
     jq -rc '.assets[] | select(.name | endswith(".zip")) | .browser_download_url')
   GRUVBOX_ZIP="$(basename "${GRUVBOX_URL}")"
   curl -fsSLo "${SRCDIR}/cache/${GRUVBOX_ZIP}" "${GRUVBOX_URL}"
   unzip -q "${SRCDIR}/cache/${GRUVBOX_ZIP}" -d "${SRCDIR}/cache/gruvbox-extract/"
-  find "${SRCDIR}/cache/gruvbox-extract/" -maxdepth 2 -name "Gruvbox-Plus-Dark" -type d \
-    | head -1 | xargs -I{} mv {} "${SRCDIR}/cache/Gruvbox-Plus-Dark"
+  find "${SRCDIR}/cache/gruvbox-extract/" -maxdepth 2 -name "Gruvbox-Plus-Dark" -type d |
+    head -1 | xargs -I{} mv {} "${SRCDIR}/cache/Gruvbox-Plus-Dark"
   rm -rf "${SRCDIR}/cache/${GRUVBOX_ZIP}" "${SRCDIR}/cache/gruvbox-extract/"
+fi
+
+if [ ! -e "${SRCDIR}/cache/Papirus-Dark" ]; then
+  PAPIRUS_URL=$(curl -fsSL https://api.github.com/repos/PapirusDevelopmentTeam/papirus-icon-theme/releases/latest |
+    jq -rc '.tarball_url')
+  curl -fsSLo "${SRCDIR}/cache/papirus-icon-theme.tar.gz" "${PAPIRUS_URL}"
+  mkdir -p "${SRCDIR}/cache/papirus-extract/"
+  tar -xzf "${SRCDIR}/cache/papirus-icon-theme.tar.gz" -C "${SRCDIR}/cache/papirus-extract/" --strip-components=1
+  find "${SRCDIR}/cache/papirus-extract/" -maxdepth 1 -name "Papirus-Dark" -type d |
+    head -1 | xargs -I{} mv {} "${SRCDIR}/cache/Papirus-Dark"
+  rm -rf "${SRCDIR}/cache/papirus-icon-theme.tar.gz" "${SRCDIR}/cache/papirus-extract/"
 fi
 
 if [ ! -e "${SRCDIR}/cache/reaper.tar.xz" ]; then
