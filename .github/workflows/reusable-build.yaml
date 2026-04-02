@@ -93,6 +93,14 @@ jobs:
       matrix: ${{fromJson(needs.generate_matrix.outputs.matrix)}}
     runs-on: ${{ matrix.platform == 'amd64' && 'ubuntu-24.04' || 'ubuntu-24.04-arm' }}
     steps:
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc \
+            /opt/hostedtoolcache/CodeQL /usr/local/share/powershell \
+            /usr/share/swift /usr/local/.ghcup
+          sudo docker image prune --all --force || true
+          df -h
+
       - name: Mount BTRFS for podman storage
         if: matrix.platform != 'arm64' && inputs.cleanup_action
         uses: ublue-os/container-storage-action@dc1f4c8f17b672069e921f001132f7cf98a423a6

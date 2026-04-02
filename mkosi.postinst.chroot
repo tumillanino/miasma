@@ -24,6 +24,38 @@ gtk-update-icon-cache -f /usr/share/icons/Gruvbox-Plus-Dark/ || true
 
 ln -sf /dev/null /usr/lib/systemd/system/systemd-remount-fs.service
 
+# Install Surge XT synthesizer from cached RPM
+rpm -Uvh --nosignature "${SRCDIR}/cache/surge-xt.rpm"
+
+# Install Reaper DAW
+tar -xJf "${SRCDIR}/cache/reaper.tar.xz" -C /tmp
+cd /tmp/reaper_linux_x86_64
+./install-reaper.sh --install /usr/lib
+mkdir -p /usr/share/applications/
+cat > /usr/share/applications/cockos-reaper.desktop << 'EOF'
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=REAPER
+GenericName=Digital Audio Workstation
+Comment=REAPER Digital Audio Workstation
+Exec=/usr/lib/REAPER/reaper %F
+Icon=/usr/lib/REAPER/Resources/main.png
+Terminal=false
+StartupNotify=true
+Categories=AudioVideo;Audio;Midi;Sequencer;
+MimeType=audio/x-reaper-project;
+EOF
+rm -rf /tmp/reaper*
+
+# Install Renoise DAW (demo)
+tar -xzf "${SRCDIR}/cache/renoise.tar.gz" -C /tmp
+cd /tmp/Renoise_*_Demo_Linux_x86_64
+./install.sh || echo "Renoise installer finished (desktop integration warnings are expected)"
+rm -rf /tmp/Renoise* || true
+
+cd /
+
 # These files NEED to be on the image.
 grep -F -e "ghcr.io/tumillanino" /etc/containers/policy.json
 grep -F -e "Comment=Central repository of Flatpak applications" /usr/share/flatpak/remotes.d/flathub.flatpakrepo
@@ -41,6 +73,9 @@ stat /usr/lib/systemd/system/brew-setup.service
 stat /usr/share/homebrew.tar.zst
 stat /usr/lib/tmpfiles.d/homebrew.conf
 stat /usr/share/icons/Gruvbox-Plus-Dark/index.theme
+stat /usr/lib/REAPER/reaper
+stat /usr/share/applications/cockos-reaper.desktop
+stat /usr/lib/systemd/system/realtime-setup.service
 
 HOME_URL="https://github.com/tumillanino/miasma"
 echo "miasma" | tee "/etc/hostname"
