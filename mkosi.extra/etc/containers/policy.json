@@ -1,8 +1,50 @@
 {
-    "default": [
+  "default": [
+    {
+      "type": "reject"
+    }
+  ],
+  "transports": {
+    "docker": {
+      "registry.access.redhat.com": [
         {
-            "type": "reject"
+          "type": "insecureAcceptAnything"
         }
+      ],
+      "registry.redhat.io": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ],
+      "ghcr.io/tumillanino": [
+        {
+          "type": "sigstoreSigned",
+          "keyPaths": [
+            "/usr/share/pki/containers/cosign.pub"
+          ],
+          "signedIdentity": {
+            "type": "matchRepository"
+          }
+        }
+      ],
+      "": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ]
+    },
+    "docker-daemon": {
+      "": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ]
+    },
+    "atomic": {
+      "": [
+        {
+          "type": "insecureAcceptAnything"
+        }<<<<<< staging
     ],
     "transports": {
         "docker": {
@@ -88,7 +130,50 @@
                     "type": "insecureAcceptAnything"
                 }
             ]
+=======
+      ]
+    },
+    "containers-storage": {
+      "": [
+        {
+          "type": "insecureAcceptAnything"
         }
+      ]
+    },
+    "dir": {
+      "": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ]
+    },
+    "oci": {
+      "": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ]
+    },
+    "oci-archive": {
+      "": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ]
+    },
+    "docker-archive": {
+      "": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ]
+    },
+    "tarball": {
+      "": [
+        {
+          "type": "insecureAcceptAnything"
+        }
+      ]
     }
+  }
 }
-
