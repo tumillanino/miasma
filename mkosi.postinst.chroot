@@ -19,8 +19,8 @@ just --completions fish | sed -E 's/([\(_" ])just/\1mjust/g' >/usr/share/fish/ve
 
 fc-cache --force --really-force --system-only --verbose # recreate font-cache to pick up the added fonts
 
-cp -r "${SRCDIR}/cache/Gruvbox-Plus-Dark" /usr/share/icons/
-gtk-update-icon-cache -f /usr/share/icons/Gruvbox-Plus-Dark/ || true
+cp -r "${SRCDIR}/cache/Papirus-Dark" /usr/share/icons/
+gtk-update-icon-cache -f /usr/share/icons/Papirus-Dark/ || true
 
 ln -sf /dev/null /usr/lib/systemd/system/systemd-remount-fs.service
 
@@ -32,7 +32,7 @@ tar -xJf "${SRCDIR}/cache/reaper.tar.xz" -C /tmp
 cd /tmp/reaper_linux_x86_64
 ./install-reaper.sh --install /usr/lib
 mkdir -p /usr/share/applications/
-cat > /usr/share/applications/cockos-reaper.desktop << 'EOF'
+cat >/usr/share/applications/cockos-reaper.desktop <<'EOF'
 [Desktop Entry]
 Version=1.0
 Type=Application
@@ -82,6 +82,7 @@ stat /usr/lib/systemd/system/brew-setup.service
 stat /usr/share/homebrew.tar.zst
 stat /usr/lib/tmpfiles.d/homebrew.conf
 stat /usr/share/icons/Gruvbox-Plus-Dark/index.theme
+stat /usr/share/icons/Papirus-Dark/index.theme
 stat /usr/lib/REAPER/reaper
 stat /usr/share/applications/cockos-reaper.desktop
 stat /usr/lib/systemd/system/realtime-setup.service

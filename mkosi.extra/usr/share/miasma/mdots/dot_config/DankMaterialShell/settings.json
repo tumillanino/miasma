@@ -120,7 +120,7 @@
   "spotlightModalViewMode": "list",
   "sortAppsAlphabetically": false,
   "networkPreference": "auto",
-  "iconTheme": "Gruvbox-Plus-Dark",
+  "iconTheme": "Papirus-Dark",
   "launcherLogoMode": "custom",
   "launcherLogoCustomPath": "/usr/share/miasma/pixmaps/logo-m.svg",
   "launcherLogoColorOverride": "surface",
