@@ -30,7 +30,8 @@
                                     @%%%#######%%##%#*+*#%@@@%%@@@@%@%%                             
                                     @@@%%%%%%%####****#@@%@%%%@@@%%@@%                              
                                    @@@@@@%@%%%%%%###%@@@@@@    %%                                   
-                                        @@%%%#%%%%%                                                 
+                                        @@%%%#%%%%%      
+*/
 include "includes/binds.kdl"
 include "includes/dms-base.kdl"
 include "includes/input.kdl"
