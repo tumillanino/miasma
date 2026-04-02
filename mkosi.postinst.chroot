@@ -56,6 +56,15 @@ rm -rf /tmp/Renoise* || true
 
 cd /
 
+# Install Nix package manager (multi-user)
+rpm -Uvh --nosignature "${SRCDIR}/cache/nix-multi-user.rpm"
+mkdir -p /usr/share/nix-store
+if [ -d /nix ] && [ "$(ls -A /nix 2>/dev/null)" ]; then
+  cp -a /nix/. /usr/share/nix-store/
+fi
+rm -rf /nix
+mkdir -p /nix
+
 # These files NEED to be on the image.
 grep -F -e "ghcr.io/tumillanino" /etc/containers/policy.json
 grep -F -e "Comment=Central repository of Flatpak applications" /usr/share/flatpak/remotes.d/flathub.flatpakrepo
@@ -76,6 +85,8 @@ stat /usr/share/icons/Gruvbox-Plus-Dark/index.theme
 stat /usr/lib/REAPER/reaper
 stat /usr/share/applications/cockos-reaper.desktop
 stat /usr/lib/systemd/system/realtime-setup.service
+stat /usr/lib/systemd/system/nix-daemon.service
+stat /usr/share/nix-store/store
 
 HOME_URL="https://github.com/tumillanino/miasma"
 echo "miasma" | tee "/etc/hostname"
@@ -99,3 +110,7 @@ s|^DEFAULT_HOSTNAME=.*|DEFAULT_HOSTNAME="miasma"|
 /^REDHAT_SUPPORT_PRODUCT_VERSION=/d
 EOF
 echo "VARIANT_ID=container" >>/usr/lib/os-release
+
+# Replace sudo with doas — done last so nothing earlier in the build is affected
+rpm -e --nodeps sudo
+ln -sf /usr/bin/doas /usr/bin/sudo
