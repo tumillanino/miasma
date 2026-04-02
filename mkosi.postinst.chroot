@@ -81,7 +81,6 @@ stat /usr/lib/systemd/system/uupd.timer
 stat /usr/lib/systemd/system/brew-setup.service
 stat /usr/share/homebrew.tar.zst
 stat /usr/lib/tmpfiles.d/homebrew.conf
-stat /usr/share/icons/Gruvbox-Plus-Dark/index.theme
 stat /usr/share/icons/Papirus-Dark/index.theme
 stat /usr/lib/REAPER/reaper
 stat /usr/share/applications/cockos-reaper.desktop
