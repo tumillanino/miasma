@@ -44,7 +44,7 @@
       "": [
         {
           "type": "insecureAcceptAnything"
-        }<<<<<< staging
+        }
     ],
     "transports": {
         "docker": {
@@ -130,7 +130,6 @@
                     "type": "insecureAcceptAnything"
                 }
             ]
-=======
       ]
     },
     "containers-storage": {
