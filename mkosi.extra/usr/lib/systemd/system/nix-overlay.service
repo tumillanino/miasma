@@ -1,7 +1,7 @@
 [Unit]
 Description=Mount OverlayFS for /nix
 DefaultDependencies=no
-After=local-fs.target systemd-tmpfiles-setup.service
+After=local-fs.target systemd-tmpfiles-setup.service systemd-modules-load.service
 Before=nix-daemon.service nix-daemon.socket
 
 [Service]
@@ -13,3 +13,4 @@ ConditionPathExists=/usr/share/nix-store/store
 
 [Install]
 WantedBy=multi-user.target
+RequiredBy=nix-daemon.socket
