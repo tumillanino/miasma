@@ -1,3 +1,4 @@
+enable miasma-set-hostname.service
 enable auditd.service
 enable realtime-setup.service
 enable realtime-entsk.service
