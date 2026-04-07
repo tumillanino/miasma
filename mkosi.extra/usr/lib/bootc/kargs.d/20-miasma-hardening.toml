@@ -1,0 +1,40 @@
+# Kernel hardening arguments adapted from Secureblue.
+#
+# Excluded from secureblue's list:
+#   lockdown=confidentiality  - blocks hardware access needed by audio drivers and debuggers
+#   mitigations=auto,nosmt   - disabling SMT halves CPU performance, unacceptable for audio
+#   module.sig_enforce=1     - blocks unsigned/DKMS kernel modules (e.g. custom audio drivers)
+#   slab_debug=FZ            - adds measurable latency, harmful for real-time audio
+
+kargs = [
+  "hash_pointers=always",
+  "init_on_alloc=1",
+  "init_on_free=1",
+  "intel_iommu=on",
+  "iommu.passthrough=0",
+  "iommu.strict=1",
+  "iommu=force",
+  "kvm_amd.sev=1",
+  "kvm_amd.sev_es=1",
+  "kvm_amd.sev_snp=1",
+  "kvm-intel.vmentry_l1d_flush=always",
+  "kvm.mitigate_smt_rsb=1",
+  "l1d_flush=on",
+  "l1tf=full,force",
+  "loglevel=0",
+  "page_alloc.shuffle=1",
+  "proc_mem.force_override=ptrace",
+  "pti=on",
+  "random.trust_bootloader=off",
+  "random.trust_cpu=off",
+  "randomize_kstack_offset=on",
+  "rd.emergency=halt",
+  "rd.shell=0",
+  "slab_nomerge",
+  "spec_store_bypass_disable=on",
+  "spectre_v2=on",
+  "ssbd=force-on",
+  "systemd.ssh_auto=no",
+  "vdso32=0",
+  "vsyscall=none",
+]
