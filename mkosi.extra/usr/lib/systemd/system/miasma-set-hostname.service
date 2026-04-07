@@ -7,7 +7,7 @@ Before=sysinit.target
 Type=oneshot
 RemainAfterExit=yes
 ExecCondition=/bin/bash -c '[ ! -s /etc/hostname ]'
-ExecStart=hostnamectl hostname miasma
+ExecStart=/bin/bash -c 'echo miasma > /etc/hostname && hostname miasma'
 
 [Install]
 WantedBy=sysinit.target
