@@ -66,7 +66,7 @@ rm -rf /nix
 mkdir -p /nix
 
 # These files NEED to be on the image.
-grep -F -e "ghcr.io/tumillanino" /etc/containers/policy.json
+grep -F -e "ghcr.io/tumillanino" /usr/share/factory/etc/containers/policy.json
 grep -F -e "Comment=Central repository of Flatpak applications" /usr/share/flatpak/remotes.d/flathub.flatpakrepo
 stat /usr/share/flatpak/remotes.d/flathub.flatpakrepo
 stat /usr/share/pki/containers/miasma.pub
