@@ -20,6 +20,7 @@ ln -sT var/srv /srv
 ln -sT ../../var/usrlocal /usr/local
 
 systemctl enable rechunker-group-fix.service
+systemctl enable miasma-set-hostname.service
 
 # fedora-bootc/minimal/basic-fixes.yaml
 

@@ -18,7 +18,7 @@ ConditionPathExists=/run/ostree-booted
 DefaultDependencies=no
 Wants=systemd-remount-fs.service
 After=systemd-remount-fs.service
-Before=systemd-sysusers.service sysinit.target systemd-user-sessions.service
+Before=systemd-sysusers.service systemd-tmpfiles-setup.service systemd-tmpfiles-setup-dev-static.service sysinit.target systemd-user-sessions.service
 
 [Service]
 Type=oneshot
