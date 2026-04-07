@@ -15,9 +15,10 @@
 [Unit]
 Description=Fix groups for Legacy rechunker
 ConditionPathExists=/run/ostree-booted
-Wants=local-fs.target
-After=local-fs.target
-Before=systemd-user-sessions.service
+DefaultDependencies=no
+Wants=systemd-remount-fs.service
+After=systemd-remount-fs.service
+Before=systemd-sysusers.service sysinit.target systemd-user-sessions.service
 
 [Service]
 Type=oneshot
@@ -28,4 +29,4 @@ ExecStart=rechunker-group-fix
 ExecStart=systemd-tmpfiles --create --remove --boot --exclude-prefix=/dev
 
 [Install]
-WantedBy=default.target multi-user.target
+WantedBy=sysinit.target
