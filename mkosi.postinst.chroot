@@ -22,7 +22,7 @@ fc-cache --force --really-force --system-only --verbose # recreate font-cache to
 cp -r "${SRCDIR}/cache/Papirus-Dark" /usr/share/icons/
 gtk-update-icon-cache -f /usr/share/icons/Papirus-Dark/ || true
 
-ln -sf /dev/null /usr/lib/systemd/system/systemd-remount-fs.service
+# ln -sf /dev/null /usr/lib/systemd/system/systemd-remount-fs.service
 
 # Install Surge XT synthesizer from cached RPM
 rpm -Uvh --nosignature "${SRCDIR}/cache/surge-xt.rpm"
