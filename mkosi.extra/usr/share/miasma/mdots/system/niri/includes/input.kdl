@@ -16,10 +16,6 @@ input {
 
     trackpoint {}
 
-    cursor {
-        theme "Papirus-Dark"
-        size 24
-    }
 }
 
 clipboard {
