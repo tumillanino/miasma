@@ -1,0 +1,71 @@
+#!/usr/bin/bash
+# zix - a friendly wrapper around nix profile
+# Adapted from Zena Linux (https://github.com/zena-linux/zena)
+# Original authors: the Zena Linux contributors
+
+set -euo pipefail
+
+usage() {
+  cat <<EOF
+Usage: zix <command> [args...]
+
+Commands:
+  add <package>...    Install packages from nixpkgs (e.g. zix add nixpkgs#git)
+  remove <package>... Remove installed packages
+  list                List installed packages
+  search <term>       Search nixpkgs for packages
+  update              Update all installed packages
+  help                Show this help
+
+Examples:
+  zix add nixpkgs#ripgrep
+  zix search nodejs
+  zix remove ripgrep
+EOF
+}
+
+if [[ $# -eq 0 ]]; then
+  usage
+  exit 1
+fi
+
+cmd="$1"
+shift
+
+case "$cmd" in
+  add)
+    if [[ $# -eq 0 ]]; then
+      echo "Error: 'add' requires at least one package name" >&2
+      exit 1
+    fi
+    exec nix profile install "$@"
+    ;;
+  remove|rm)
+    if [[ $# -eq 0 ]]; then
+      echo "Error: 'remove' requires at least one package name" >&2
+      exit 1
+    fi
+    exec nix profile remove "$@"
+    ;;
+  list|ls)
+    exec nix profile list
+    ;;
+  search)
+    if [[ $# -eq 0 ]]; then
+      echo "Error: 'search' requires a search term" >&2
+      exit 1
+    fi
+    exec nix search nixpkgs "$@"
+    ;;
+  update|upgrade)
+    exec nix profile upgrade '.*'
+    ;;
+  help|--help|-h)
+    usage
+    ;;
+  *)
+    echo "Error: unknown command '$cmd'" >&2
+    usage
+    exit 1
+    ;;
+esac
