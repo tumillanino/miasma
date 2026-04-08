@@ -1,13 +1,14 @@
 [Unit]
-Description=Set default hostname if not configured
+Description=Set default Miasma hostname on first boot
 DefaultDependencies=no
 Before=sysinit.target
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecCondition=/bin/bash -c '[ ! -s /etc/hostname ]'
+ConditionPathExists=!/var/lib/miasma/.hostname-initialized
 ExecStart=/bin/bash -c 'echo miasma > /etc/hostname && hostname miasma'
+ExecStartPost=/bin/bash -c 'mkdir -p /var/lib/miasma && touch /var/lib/miasma/.hostname-initialized'
 
 [Install]
 WantedBy=sysinit.target
